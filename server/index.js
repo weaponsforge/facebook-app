@@ -11,8 +11,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // ssl certs
-const privateKey = fs.readFileSync(path.join(__dirname, '/scripts/server.key'), 'utf8')
-const certificate = fs.readFileSync(path.join(__dirname, '/scripts/server.cert'), 'utf8')
+const privateKey = fs.readFileSync(path.join(__dirname, '/helpers/server.key'), 'utf8')
+const certificate = fs.readFileSync(path.join(__dirname, '/helpers/server.cert'), 'utf8')
 const credentials = {
   key: privateKey,
   cert: certificate
